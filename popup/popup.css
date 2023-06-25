@@ -1,0 +1,17 @@
+#popup-content {
+    width: 300px;
+    margin: 10px;
+}
+
+#popup-content > div {
+    margin-bottom: 10px;
+}
+
+#dl-button {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: navy;
+    color: gainsboro;
+    border: none;
+}
