@@ -1,4 +1,4 @@
-let garminAuthHeader = ""
+let garminAuthHeader = "";
 
 function extractAuthHeader(e) {
   for (let header of e.requestHeaders) {

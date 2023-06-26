@@ -1,17 +1,28 @@
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 #popup-content {
-    width: 300px;
-    margin: 10px;
+  width: 300px;
+  margin: 10px;
 }
 
 #popup-content > div {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #dl-button {
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: navy;
-    color: gainsboro;
-    border: none;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: navy;
+  color: gainsboro;
+  border: none;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+
+#numactivities {
+  width: 5em;
 }

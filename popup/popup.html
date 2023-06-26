@@ -2,18 +2,30 @@
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="popup.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
   </head>
 
-<body>
-  <div id="popup-content">
-    <div>Open <a href="https://connect.garmin.com/modern">Garmin Connect</a>, then use this extension to download your workout data.</div>
-    <button id="dl-button">Download</button>
-  </div>
-  <div id="error-content" class="hidden">
-  </div>
-  <script src="popup.js"></script>
-</body>
-
+  <body>
+    <div id="popup-content">
+      <p>
+        Open <a href="https://connect.garmin.com/modern">Garmin Connect</a>,
+        then use this extension to download your workout data.
+      </p>
+      <form id="dl-form">
+        <p>How many latest activities do you want to download?</p>
+        <div>
+          <input
+            type="number"
+            name="numactivities"
+            id="numactivities"
+            required
+          />
+        </div>
+        <input id="dl-button" type="submit" value="Download" />
+      </form>
+    </div>
+    <div id="error-content" class="hidden"></div>
+    <script src="popup.js"></script>
+  </body>
 </html>
