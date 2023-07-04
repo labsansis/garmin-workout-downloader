@@ -116,7 +116,10 @@
           break;
         }
       }
-      downloadJsonAsFile(allActivities, "activities");
+      const fileName = `garmin-workouts-${
+        message.numActivitiesToFetch
+      }-${new Date().toISOString().substring(0, 10)}`;
+      downloadJsonAsFile(allActivities, fileName);
     }
   });
 })();
