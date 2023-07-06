@@ -12,12 +12,16 @@ including strength traiing details, and download this data locally.
 
 # Installation
 
-At the time of writing this is not published on any extension hubs so needs to be
-run as a temporary extension. Also note that this has only been tested on
-Firefox 114.0.2.
+Currently the extension has only been tested on Firefox. Versions for other browsers
+should be coming soon.
 
-1. Clone or download this repo
-2. Follow instructions to load a temp extension for the latest browser version. [This](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#trying_it_out) is a recent one for Firefox.
+At the time of writing the extension has been submitted for review on the Firefox AMO
+but not approved yet.
+
+As such, the primary way of installing the extension on Firefox is by clicking on
+the link below:
+
+[Click here to install the extension on Firefox](https://workoutstats.strongadget.com/garmin-workout-downloader/garmin-workout-downloader.xpi)
 
 # Use
 

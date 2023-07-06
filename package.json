@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A browser extension to download strength workout data from Garmin Connect",
   "scripts": {
-    "test": "echo \"Error: no tests implemented yet\" && exit 1"
+    "test": "echo \"Error: no tests implemented yet\" && exit 1",
+    "sign": "web-ext sign --source-dir src",
+    "firefox:start": "web-ext run --source-dir src"
   },
   "repository": {
     "type": "git",
