@@ -23,6 +23,10 @@ the link below:
 
 [Click here to install the extension on Firefox](https://workoutstats.strongadget.com/garmin-workout-downloader/garmin-workout-downloader.xpi)
 
+If you want to load it from source instead, you can clone this repo and just load the
+`src/mainifest.json` (currently the extension is fully vanilla js so does not need
+any compilation) or run `npm firefox:start`.
+
 # Use
 
 1. Open https://connect.garmin.com/modern/
@@ -30,11 +34,15 @@ the link below:
 3. Open the extension to download activity data
 4. A JSON file containing the data will be automatically downloaded.
 
-## What data does the output contain?
+# How do I use the downloaded data?
 
 The downloaded JSON is pretty close to the internal Garmin Connect responses to
 some API calls, in particular Activity List and and an activiy's Exercise Sets.
 These are then joined up for one download file.
+
+If you don't know what to do with JSON files and/or are looking for a simple
+interface to explore your strength training progress, check out the
+[Workout Stats UI](https://workoutstats.strongadget.com/).
 
 # How does it work?
 
