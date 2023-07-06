@@ -1,1 +1,5 @@
 build
+.env
+web-ext-artifacts
+
+node_modules
