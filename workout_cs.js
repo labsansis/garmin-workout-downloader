@@ -97,29 +97,34 @@
           allActivities.length
         )
           .then((activities) => {
-            console.log(
+            console.debug(
               `Before extension we have ${activities.length} activities`
             );
             return Promise.all(
               activities.map((a) => enrichAcitvity(a, message.authHeader))
             );
           })
-          .catch(console.error);
+          .catch(err => {
+            browser.runtime.sendMessage({ status: "loadingError", error: err });
+            console.error(err);
+          });
         if (!!activities) {
-          console.log(
+          console.debug(
             `After extension we have ${activities.length} activities`
           );
-          console.log(activities);
+          console.debug(activities);
           allActivities.push(...activities);
           if (activities.length < PAGE_SIZE) break;
         } else {
           break;
         }
       }
+      allActivities = allActivities.slice(0, message.numActivitiesToFetch);
       const fileName = `garmin-workouts-${new Date()
         .toISOString()
         .substring(0, 10)}_${message.numActivitiesToFetch}`;
       downloadJsonAsFile(allActivities, fileName);
+      browser.runtime.sendMessage({ status: "loadingSuccess", numActivitiesFetched: allActivities.length });
     }
   });
 })();

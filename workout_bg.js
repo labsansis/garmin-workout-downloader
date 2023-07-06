@@ -2,7 +2,7 @@ let garminAuthHeader = "";
 
 function extractAuthHeader(e) {
   for (let header of e.requestHeaders) {
-    if (header.name === "Authorization") {
+    if (header.name === "Authorization" && header.value.startsWith("Bearer")) {
       garminAuthHeader = header.value;
     }
   }

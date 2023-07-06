@@ -8,10 +8,11 @@
 
   <body>
     <div id="popup-content">
-      <p>
+      <p id="instruction-wrong-url">
         Open <a href="https://connect.garmin.com/modern">Garmin Connect</a>,
         then use this extension to download your workout data.
       </p>
+      <p id="instruction-other"></p>
       <form id="dl-form">
         <p>How many latest activities do you want to download?</p>
         <div>
@@ -25,7 +26,11 @@
         <input id="dl-button" type="submit" value="Download" />
       </form>
     </div>
-    <div id="error-content" class="hidden"></div>
+    <div id="popup-info-container">
+      <div id="loader-container"><span class="loader"></span></div>
+      <div id="error-content"></div>  
+      <div id="success-content"></div>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
