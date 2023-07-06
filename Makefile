@@ -1,0 +1,2 @@
+format:
+	npx prettier -w .

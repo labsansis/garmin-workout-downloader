@@ -104,7 +104,7 @@
               activities.map((a) => enrichAcitvity(a, message.authHeader))
             );
           })
-          .catch(err => {
+          .catch((err) => {
             browser.runtime.sendMessage({ status: "loadingError", error: err });
             console.error(err);
           });
@@ -124,7 +124,10 @@
         .toISOString()
         .substring(0, 10)}_${message.numActivitiesToFetch}`;
       downloadJsonAsFile(allActivities, fileName);
-      browser.runtime.sendMessage({ status: "loadingSuccess", numActivitiesFetched: allActivities.length });
+      browser.runtime.sendMessage({
+        status: "loadingSuccess",
+        numActivitiesFetched: allActivities.length,
+      });
     }
   });
 })();

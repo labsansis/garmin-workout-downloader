@@ -40,7 +40,7 @@ body {
 }
 .loader::after,
 .loader::before {
-  content: '';  
+  content: "";
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -49,7 +49,7 @@ body {
   bottom: 0;
   margin: auto;
   border: 2px solid;
-  border-color: transparent transparent #FF3D00 #FF3D00;
+  border-color: transparent transparent #ff3d00 #ff3d00;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -63,7 +63,7 @@ body {
   border-color: #2c2c2c #2c2c2c transparent transparent;
   animation: rotation 1.5s linear infinite;
 }
-    
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -71,7 +71,7 @@ body {
   100% {
     transform: rotate(360deg);
   }
-} 
+}
 @keyframes rotationBack {
   0% {
     transform: rotate(0deg);
