@@ -1,0 +1,21 @@
+{
+  "name": "garmin-workout-downloader",
+  "version": "1.0.0",
+  "description": "A browser extension to download strength workout data from Garmin Connect",
+  "scripts": {
+    "test": "echo \"Error: no tests implemented yet\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/labsansis/garmin-workout-downloader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/labsansis/garmin-workout-downloader/issues"
+  },
+  "homepage": "https://github.com/labsansis/garmin-workout-downloader#readme",
+  "devDependencies": {
+    "web-ext": "^7.6.2"
+  }
+}
