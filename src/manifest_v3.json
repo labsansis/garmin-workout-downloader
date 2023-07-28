@@ -35,9 +35,7 @@
   "content_scripts": [
     {
       "matches": ["*://connect.garmin.com/*"],
-      "js": [
-        "workout_cs.js"
-      ]
+      "js": ["workout_cs.js"]
     }
   ]
 }

@@ -8,12 +8,15 @@
     "48": "icons/icon-dumbbell.svg"
   },
 
-  "permissions": ["activeTab", "webRequest", "storage", "*://connect.garmin.com/*"],
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "storage",
+    "*://connect.garmin.com/*"
+  ],
 
   "background": {
-    "scripts": [
-      "workout_bg.js"
-    ]
+    "scripts": ["workout_bg.js"]
   },
 
   "browser_action": {
@@ -32,9 +35,7 @@
   "content_scripts": [
     {
       "matches": ["*://connect.garmin.com/*"],
-      "js": [
-        "workout_cs.js"
-      ]
+      "js": ["workout_cs.js"]
     }
   ]
 }
