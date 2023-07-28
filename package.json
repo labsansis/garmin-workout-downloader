@@ -5,9 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no tests implemented yet\" && exit 1",
     "sign": "web-ext sign --source-dir src",
-    "firefox:build": "cp src/manifest_v2.json src/manifest.json && web-ext build --source-dir src",
+    "firefox:build": "cp src/manifest_v2.json src/manifest.json && web-ext build --source-dir src --artifacts-dir web-ext-artifacts/firefox",
     "firefox:start": "cp src/manifest_v2.json src/manifest.json && web-ext run --source-dir src",
-    "chrome:build": "cp src/manifest_v3.json src/manifest.json && web-ext build --source-dir src"
+    "chrome:build": "cp src/manifest_v3.json src/manifest.json && web-ext build --source-dir src --artifacts-dir web-ext-artifacts/chrome"
   },
   "repository": {
     "type": "git",
