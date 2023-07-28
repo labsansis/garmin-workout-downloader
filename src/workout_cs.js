@@ -11,6 +11,10 @@
 
   const PAGE_SIZE = 20;
 
+  if (!('browser' in self)) {
+    self.browser = self.chrome;
+  }
+  
   async function fetchActivitiesList(authHeader, pageSize, start) {
     const url = `https://connect.garmin.com/activitylist-service/activities/search/activities?limit=${pageSize}&start=${start}`;
 
