@@ -1,5 +1,5 @@
-build
+**/build
 .env
-web-ext-artifacts
+**/web-ext-artifacts
 
-node_modules
+**/node_modules

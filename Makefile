@@ -6,7 +6,7 @@ format:
 package:
 	npm run sign
 
-# take the only file in web-ext-artifacts and upload it to s3 with a standardised name.
+# take the only file in web-ext-artifacts (coming from web-ext sign) and upload it to s3 with a standardised name.
 self-publish:
 	ls web-ext-artifacts/ \
 		| head -n 1 \

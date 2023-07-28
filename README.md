@@ -12,20 +12,22 @@ including strength traiing details, and download this data locally.
 
 # Installation
 
-Currently the extension has only been tested on Firefox. Versions for other browsers
-should be coming soon.
+This extension has been tested on Firefox and Chrome. It has been submitted to
+both browsers' stores and is undergoing review at the time of writing.
 
-At the time of writing the extension has been submitted for review on the Firefox AMO
-but not approved yet.
-
-As such, the primary way of installing the extension on Firefox is by clicking on
-the link below:
+As such, for now the extension needs to be installed manually. The easiest way
+to do do this on Firefox is by clicking on the link below:
 
 [Click here to install the extension on Firefox](https://workoutstats.strongadget.com/garmin-workout-downloader/garmin-workout-downloader.xpi)
 
-If you want to load it from source instead, you can clone this repo and just load the
-`src/mainifest.json` (currently the extension is fully vanilla js so does not need
-any compilation) or run `npm firefox:start`.
+On Chrome the easiest way is to take a zipped build (I've pre-built one
+[here](https://drive.google.com/file/d/1cDuf4NRq2ggvuUFX4oixDnw1sd09Z-rZ/view?usp=sharing)
+for convenience), unzip it and then load it as an unpacked extension (instructions
+[here](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)).
+
+If you want to load it from source instead, you can clone this repo and run
+`npm run firefox:build` or `npm run chrome:build` to build the extension for
+the relevant browser.
 
 # Use
 

@@ -1,14 +1,19 @@
 {
   "manifest_version": 2,
-  "name": "Garmin Strength Workout Downloader",
+  "name": "Garmin Workout Downloader",
   "description": "Download workout data from the Garmin Connect console. Strength workouts are downloaded with exercise names, reps and weights.",
-  "version": "1.0",
+  "version": "1.0.1",
   "homepage_url": "https://github.com/TODO",
   "icons": {
     "48": "icons/icon-dumbbell.svg"
   },
 
-  "permissions": ["activeTab", "webRequest", "*://connect.garmin.com/*"],
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "storage",
+    "*://connect.garmin.com/*"
+  ],
 
   "background": {
     "scripts": ["workout_bg.js"]

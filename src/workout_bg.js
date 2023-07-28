@@ -1,9 +1,11 @@
-let garminAuthHeader = "";
+if (!("browser" in self)) {
+  self.browser = self.chrome;
+}
 
 function extractAuthHeader(e) {
   for (let header of e.requestHeaders) {
     if (header.name === "Authorization" && header.value.startsWith("Bearer")) {
-      garminAuthHeader = header.value;
+      browser.storage.session.set({ garminAuthHeader: header.value });
     }
   }
 }
@@ -11,9 +13,5 @@ function extractAuthHeader(e) {
 browser.webRequest.onBeforeSendHeaders.addListener(
   extractAuthHeader,
   { urls: ["*://connect.garmin.com/*"] },
-  ["requestHeaders"]
+  ["requestHeaders"],
 );
-
-function getGarminAuthHeader() {
-  return garminAuthHeader;
-}

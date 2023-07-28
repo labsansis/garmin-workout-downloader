@@ -11,6 +11,10 @@
 
   const PAGE_SIZE = 20;
 
+  if (!("browser" in self)) {
+    self.browser = self.chrome;
+  }
+
   async function fetchActivitiesList(authHeader, pageSize, start) {
     const url = `https://connect.garmin.com/activitylist-service/activities/search/activities?limit=${pageSize}&start=${start}`;
 
@@ -94,14 +98,14 @@
         let activities = await fetchActivitiesList(
           message.authHeader,
           PAGE_SIZE,
-          allActivities.length
+          allActivities.length,
         )
           .then((activities) => {
             console.debug(
-              `Before extension we have ${activities.length} activities`
+              `Before extension we have ${activities.length} activities`,
             );
             return Promise.all(
-              activities.map((a) => enrichAcitvity(a, message.authHeader))
+              activities.map((a) => enrichAcitvity(a, message.authHeader)),
             );
           })
           .catch((err) => {
@@ -110,7 +114,7 @@
           });
         if (!!activities) {
           console.debug(
-            `After extension we have ${activities.length} activities`
+            `After extension we have ${activities.length} activities`,
           );
           console.debug(activities);
           allActivities.push(...activities);
