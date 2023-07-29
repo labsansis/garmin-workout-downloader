@@ -18,7 +18,7 @@ both browsers' stores and is undergoing review at the time of writing.
 As such, for now the extension needs to be installed manually. The easiest way
 to do do this on Firefox is by clicking on the link below:
 
-[Click here to install the extension on Firefox](https://workoutstats.strongadget.com/garmin-workout-downloader/garmin-workout-downloader.xpi)
+[Click here to install the extension on Firefox](https://workout.love/garmin-workout-downloader/garmin-workout-downloader.xpi)
 
 On Chrome the easiest way is to take a zipped build (I've pre-built one
 [here](https://drive.google.com/file/d/1cDuf4NRq2ggvuUFX4oixDnw1sd09Z-rZ/view?usp=sharing)
@@ -44,7 +44,7 @@ These are then joined up for one download file.
 
 If you don't know what to do with JSON files and/or are looking for a simple
 interface to explore your strength training progress, check out the
-[Workout Stats UI](https://workoutstats.strongadget.com/).
+[Workout Stats UI](https://workout.love/).
 
 # How does it work?
 
