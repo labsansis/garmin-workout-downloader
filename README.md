@@ -12,15 +12,15 @@ including strength traiing details, and download this data locally.
 
 # Installation
 
-This extension has been tested on Firefox and Chrome. It has been submitted to
-both browsers' stores and is undergoing review at the time of writing.
+This extension has been tested on Firefox and Chrome.
 
-As such, for now the extension needs to be installed manually. The easiest way
-to do do this on Firefox is by clicking on the link below:
+You can install it on Firefox from the
+[official Add-on store](https://addons.mozilla.org/en-US/firefox/addon/garmin-workout-downloader/).
 
-[Click here to install the extension on Firefox](https://workout.love/garmin-workout-downloader/garmin-workout-downloader.xpi)
+At the time of writing, the Chrome version has been submitted to the Chrome Web Store
+but not approved yet. As such, for now the extension needs to be installed manually.
 
-On Chrome the easiest way is to take a zipped build (I've pre-built one
+The easiest way to do do this is to take a zipped build (I've pre-built one
 [here](https://drive.google.com/file/d/1cDuf4NRq2ggvuUFX4oixDnw1sd09Z-rZ/view?usp=sharing)
 for convenience), unzip it and then load it as an unpacked extension (instructions
 [here](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)).
