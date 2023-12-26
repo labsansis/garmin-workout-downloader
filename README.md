@@ -55,3 +55,7 @@ activities. You may also get hit by rate limiters, although I haven't hit that i
 # Contributing
 
 Feel free to open PRs, issues etc.
+
+# Privacy Policy
+
+See [Privacy Policy](privacy.md)
