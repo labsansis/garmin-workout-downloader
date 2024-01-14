@@ -43,7 +43,7 @@
 
   async function fetchActivityExerciseSets(activityId, authHeader) {
     const url = `https://connect.garmin.com/activity-service/activity/${activityId}/exerciseSets`;
-    const response = await fetch(url, {
+    const responseJson = await fetch(url, {
       credentials: "include",
       headers: {
         Accept: "application/json, text/javascript, */*; q=0.01",
@@ -62,21 +62,21 @@
       referrer: "https://connect.garmin.com/modern/activities",
       method: "GET",
       mode: "cors",
-    });
-    let rj = await response.json();
-    return rj.exerciseSets || [];
+    })
+      .then((resp) => {
+        if (resp.ok) return resp.json();
+        return {};
+      })
+      .catch((err) => {
+        return {};
+      });
+    return responseJson.exerciseSets || [];
   }
 
   async function enrichAcitvity(activity, authHeader) {
-    if (
-      activity &&
-      activity.activityType &&
-      activity.activityType.typeKey === "strength_training"
-    ) {
-      activity.fullExerciseSets = [
-        ...(await fetchActivityExerciseSets(activity.activityId, authHeader)),
-      ];
-    }
+    activity.fullExerciseSets = [
+      ...(await fetchActivityExerciseSets(activity.activityId, authHeader)),
+    ];
     return activity;
   }
 
